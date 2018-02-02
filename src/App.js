@@ -32,7 +32,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div>Hello world!
         <ListContacts contacts={contacts} />
       </div>
     )
