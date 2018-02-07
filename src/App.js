@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React,{Component} from 'react';
+
 //import { Route } from 'react-router-dom'
 import ListContacts from './ListContacts'
 //import CreateContact from './CreateContact'
@@ -27,14 +28,20 @@ class App extends Component {
       }]
   }
 
+  removeContact = (contact) => {
+    this.setState((state) => ({
+      contacts: state.contacts.filter((c) => c.id !== contact.id)
+    }))
+  }
 
   render() {
     return (
-      <div>Hello world!
-        <ListContacts contacts={this.state.contacts} />
+      <div>
+        <ListContacts onDeleteContact={this.removeContact} contacts={this.state.contacts} />
       </div>
     )
   }
+
 }
 
 export default App;
