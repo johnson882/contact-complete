@@ -52,6 +52,10 @@ import sortBy from 'sort-by'
              onChange={(event) => this.updateQuery(event.target.value)}
 
             />
+            <a
+            href ="#create" onClick={this.props.onNavigte} className="add-contact" >
+            add contacts
+            </a>
             {showingContacts.length !== contacts.length && (
               <div className='showing-contacts'>
               <span> now showing {showingContacts.length} of {contacts.length} total</span>
