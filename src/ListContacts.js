@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 import escapeRegExp from 'escape-string-regexp'
 import PropTypes from 'prop-types'
 import sortBy from 'sort-by'
@@ -52,10 +53,10 @@ import sortBy from 'sort-by'
              onChange={(event) => this.updateQuery(event.target.value)}
 
             />
-            <a
-            href ="#create" onClick={this.props.onNavigte} className="add-contact" >
+            <Link
+            to ="/create" className="add-contact" >
             add contacts
-            </a>
+            </Link>
             {showingContacts.length !== contacts.length && (
               <div className='showing-contacts'>
               <span> now showing {showingContacts.length} of {contacts.length} total</span>
